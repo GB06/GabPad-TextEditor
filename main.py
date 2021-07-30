@@ -49,7 +49,7 @@ def save_as_file():
     if text_file:
         name = text_file
         status_bar.config(text=f'Saved: {name}        ')
-        name = name.replace("/Volumes/Backup", "")
+        name = name.replace("/Volumes/Backup/", "")
         root.title(f'{name} - ThunderPad')
         text_file = open(text_file, 'w')
         text_file.write(my_text.get(1.0, END))
@@ -110,7 +110,7 @@ my_frame.pack(pady=5)
 
 text_scroll = Scrollbar(my_frame)
 text_scroll.pack(side=RIGHT, fill=Y)
-\
+
 
 hor_scroll = Scrollbar(my_frame, orient="horizontal")
 hor_scroll.pack(side=BOTTOM, fill=X)
