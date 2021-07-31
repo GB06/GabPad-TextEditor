@@ -254,5 +254,4 @@ color_text_button = Button(toolbar_frame, text="Text Color", command=text_color)
 color_text_button.grid(row=0, column=4, padx=5)
 
 
-
 root.mainloop()
