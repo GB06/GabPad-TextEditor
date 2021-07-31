@@ -4,7 +4,7 @@ from tkinter import font
 from tkinter import colorchooser
 
 root = Tk()
-root.title("ThunderPad")
+root.title("GabPad")
 root.geometry("1080x720")
 
 
@@ -17,7 +17,7 @@ selected = False
 
 def new_file():
     my_text.delete("1.0", END)
-    root.title("New File - ThunderPad")
+    root.title("New File - GabPad")
     status_bar.config(text="New File        ")
 
     global open_status_name
@@ -36,7 +36,7 @@ def open_file():
     name = text_file
     status_bar.config(text=f"{name}        ")
     name = name.replace("/Volumes/Backup/", "")
-    root.title(f"{name} - ThunderPad")
+    root.title(f"{name} - GabPad")
     text_file = open(text_file, 'r')
     stuff = text_file.read()
     my_text.insert(END, stuff)
@@ -51,7 +51,7 @@ def save_as_file():
         name = text_file
         status_bar.config(text=f'Saved: {name}        ')
         name = name.replace("/Volumes/Backup/", "")
-        root.title(f'{name} - ThunderPad')
+        root.title(f'{name} - GabPad')
         text_file = open(text_file, 'w')
         text_file.write(my_text.get(1.0, END))
         text_file.close()
